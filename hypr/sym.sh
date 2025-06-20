@@ -1,5 +1,8 @@
 #!/bin/bash
 
+rm -rf /home/$USER/.config/kitty
+rm -rf /home/$USER/.config/hypr 
+
 ln -s /home/$USER/mydots/hypr /home/$USER/.config
 ln -s /home/$USER/mydots/kitty /home/$USER/.config
 ln -s /home/$USER/mydots/scripts /home/$USER/.config
