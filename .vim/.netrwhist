@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/riezzo/.config/waybar'
+let g:netrw_dirhist_9='/home/riezzo/.config/hypr'
+let g:netrw_dirhist_8='/home/riezzo/mydots/hypr'
+let g:netrw_dirhist_7='/home/riezzo/.config'
+let g:netrw_dirhist_6='/home/riezzo/.config/hypr'
+let g:netrw_dirhist_5='/home/riezzo/mydots/rofi/powermenu/type-3'
+let g:netrw_dirhist_4='/home/riezzo/mydots/rofi/launchers/type-6'
+let g:netrw_dirhist_3='/home/riezzo/mydots/scripts/weather_cache'
+let g:netrw_dirhist_2='/home/riezzo/.config/hypr'
+let g:netrw_dirhist_1='/home/riezzo/mydots/rofi/launchers/type-6'

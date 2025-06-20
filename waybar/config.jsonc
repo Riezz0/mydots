@@ -1,0 +1,87 @@
+{
+//GENERAL//SETTINGS//////////////////////////////////////////////////////////////////////////////////   
+    "height": 35, // Waybar height (to be removed for auto height)
+    "margin-top": 4,
+    "margin-right": 4,
+    "margin-left": 4,
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": ["custom/launcher","custom/salaat","custom/vm"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray","custom/weather","pulseaudio","network","clock","custom/powermenu"],
+///////////////////////////////////////////////////////////////////GENERAL//SETTINGS/////////////////
+
+//WORKSPACES/////////////////////////////////////////////////////////////////////////////////////////   
+     "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{icon}",
+         "format-icons": {
+             "active": "<span font='20px'>󰮯</span> ",
+             "default": "<span font='18px'>󰊠</span> "}},
+//////////////////////////////////////////////////////////////////////////WORKSPACES/////////////////   
+
+//POWERMENU//////////////////////////////////////////////////////////////////////////////////////////   
+"custom/powermenu": {
+        "format": "<span font='20px'>󰐦</span>",
+        "tooltip": false,
+        "on-click": "bash ~/.config/rofi/powermenu/type-6/powermenu.sh"},
+///////////////////////////////////////////////////////////////////////////POWERMENU/////////////////
+
+//PRAYERTIMES////////////////////////////////////////////////////////////////////////////////////////
+"custom/salaat": {
+	"exec": "python /home/riezzo/.config/scripts/salaat.py",
+	"return-type": "json",
+	"interval": 300,
+        "tooltip": true},
+/////////////////////////////////////////////////////////////////////////PRAYERTIMES/////////////////
+
+//WEATHER////////////////////////////////////////////////////////////////////////////////////////////
+"custom/weather": {
+	"exec": "python /home/riezzo/.config/scripts/weather.py",
+	"return-type": "json",
+	"interval": 300,
+        "tooltip": true},
+/////////////////////////////////////////////////////////////////////////////WEATHER/////////////////   
+
+//LAUNCHER///////////////////////////////////////////////////////////////////////////////////////////
+"custom/launcher": {
+        "format": "<span font='20px'>󰣇</span>",
+        "tooltip": false,
+        "on-click": "bash /home/riezzo/.config/rofi/launchers/type-6/launcher.sh"},
+////////////////////////////////////////////////////////////////////////////LAUNCHER///////////////// 
+
+//CLOCK//////////////////////////////////////////////////////////////////////////////////////////////
+"clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"},
+///////////////////////////////////////////////////////////////////////////////CLOCK/////////////////
+
+//NETWORK////////////////////////////////////////////////////////////////////////////////////////////
+"network": {
+        "format-ethernet": "{ipaddr} <span font='20px'>󰲝</span> ",
+	"tooltip": false,
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠ "},
+////////////////////////////////////////////////////////////////////////NETWORK/////////////////////
+	
+//AUDIO/////////////////////////////////////////////////////////////////////////////////////////////
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", " ", " "]},
+        "on-click": "pavucontrol"}
+///////////////////////////////////////////////////////////////////////AUDIO////////////////////////
+}

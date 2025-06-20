@@ -1,0 +1,10 @@
+
+
+//POWERMENU///////////////////////////////////////////////////////////////////     
+"custom/powermenu": {
+        "format": "<span font='20px'>󰐦</span>",
+        "tooltip": false,
+        "on-click": "bash ~/.config/rofi/powermenu/type-6/powermenu.sh"},
+///////////////////////////////////////////////////////////////////POWERMENU//
+
+

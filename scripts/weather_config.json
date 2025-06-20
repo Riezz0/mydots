@@ -1,0 +1,8 @@
+{
+    "provider": "openweathermap",
+    "location": "Johannesburg",
+    "api_key": "2f47ec0a0123be01291ba8673e7febf7",
+    "units": "metric",
+    "format": "{icon} {temp}°{unit}",
+    "tooltip_format": "{conditions}\nHumidity: {humidity}%\nWind: {wind} {wind_unit}\nUpdated: {updated}"
+}
