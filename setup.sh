@@ -42,20 +42,7 @@ arch-gaming-meta \
 dvkx-bin \
 python-virtualenv \
 python-pip \
-qemu-full \
-libvirt \
-virt-install \
-virt-manager \
-virt-viewer \
-edk2-ovmf \
-dnsmasq \
-bridge-utils \
-bluez \
-bluez-utils \
-pulseaudio-bluetooth \
-blueman \
-nct6687d-dkms-git \
-base-devel \
+
 
 #-----Clone Dotfiles-----#
 sleep 3 && echo "Cloning Dotfiles"
@@ -64,12 +51,18 @@ mkdir /home/$USER/Documents/dotfiles
 git clone git@github.com:Riezz0/mydots.git /home/$USER/Documents/dotfiles
 cd /home/$USER/Documents/dotfiles
 
-#-----Sym Links-----#
-sleep 3 && echo "Symlinking Dotfiles"
-sleep 3
+
+#-----Remove Existing Folders
+echo "Removing Existing Folders"
+sleep 3 
 rm -rf /home/$USER/.config/hypr 
-ln -s /home/$USER/Documents/dotfiles/hypr /home/$USER/.config
 rm -rf /home/$USER/.config/kitty
+sudo rm -rf /usr/share/icons/default
+
+#-----Sym Links-----#
+echo "Symlinking Dotfiles"
+sleep 3 
+ln -s /home/$USER/Documents/dotfiles/hypr /home/$USER/.config
 ln -s /home/$USER/Documents/dotfiles/kitty /home/$USER/.config
 ln -s /home/$USER/Documents/dotfiles/scripts /home/$USER/.config
 ln -s /home/$USER/Documents/dotfiles/walls /home/$USER/.config
@@ -86,14 +79,19 @@ ln -s /home/$USER/Documents/dotfiles/qt6ct /home/$USER/.config
 ln -s /home/$USER/Documents/dotfiles/waybar /home/$USER/.config
 ln -s /home/$USER/Documents/dotfiles/rofi /home/$USER/.config
 sudo ln -s /home/$USER/mydots/cursors/Future-dark-cursors /usr/share/icons/
-sudo rm -rf /usr/share/icons/default
 sudo ln -s /home/$USER/mydots/cursors/default /usr/share/icons/
 
+
+#-----Apply Theme-----#
+echo "Applying Theme"
+sleep 3 
 gsettings set org.gnome.desktop.interface cursor-theme Future-dark-cursors
 gsettings set org.gnome.desktop.interface gtk-theme oomox-riezzo-red
 gsettings set org.gnome.desktop.interface icon-theme oomox-riezzo-red
 
 
 #-----Enable Ly-----#
+echo "Enabling Ly"
+sleep 3 
 sudo systemctl enable ly
 sudo systemctl start ly
