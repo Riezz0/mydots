@@ -51,7 +51,7 @@ python-pip \
 echo "Hyprland installed with essential dependencies"
 
 #-----Clone Dotfiles-----#
-sleep 3 && echo "Cloning Dotfiles"
+echo "Cloning Dotfiles"
 sleep 3
 mkdir /home/$USER/.dotfiles
 git clone git@github.com:Riezz0/mydots.git /home/$USER/.dotfiles
