@@ -89,6 +89,11 @@ sudo ln -s /home/$USER/mydots/cursors/Future-dark-cursors /usr/share/icons/
 sudo rm -rf /usr/share/icons/default
 sudo ln -s /home/$USER/mydots/cursors/default /usr/share/icons/
 
+gsettings set org.gnome.desktop.interface cursor-theme Future-dark-cursors
+gsettings set org.gnome.desktop.interface gtk-theme oomox-riezzo-red
+gsettings set org.gnome.desktop.interface icon-theme oomox-riezzo-red
+
+
 #-----Enable Ly-----#
 sudo systemctl enable ly
 sudo systemctl start ly
