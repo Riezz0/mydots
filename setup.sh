@@ -73,8 +73,6 @@ rm -rf /home/$USER/.config/kitty
 ln -s /home/$USER/Documents/dotfiles/kitty /home/$USER/.config
 ln -s /home/$USER/Documents/dotfiles/scripts /home/$USER/.config
 ln -s /home/$USER/Documents/dotfiles/walls /home/$USER/.config
-#ln -s /home/$USER/Documents/dotfiles/.oh-my-zsh /home/$USER/
-ln -s /home/$USER/Documents/dotfiles/.zshrc /home/$USER/
 ln -s /home/$USER/Documents/dotfiles/.vim /home/$USER/
 ln -s /home/$USER/Documents/dotfiles/.vimrc /home/$USER/
 ln -s /home/$USER/Documents/dotfiles/.themes /home/$USER/
