@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #-----YAY-----#
 echo "Installing YAY" && sleep 3
