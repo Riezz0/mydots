@@ -38,6 +38,7 @@ qemu-full
 libvirt 
 virt-install 
 virt-manager 
+spice-vdagent
 virt-viewer 
 edk2-ovmf 
 dnsmasq 

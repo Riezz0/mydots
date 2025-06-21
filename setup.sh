@@ -4,31 +4,6 @@
 echo "Installing YAY" && sleep 3
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
-#-----ZSH-----#
-echo "Installing ZSH"
-sleep 3
-yay -S zsh --noconfirm
-
-#-----OHMYZSH-----#
-echo "Installing OHMYZSH"
-sleep 3
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-echo "Installing ZSH Autosuggestions"
-sleep 3
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-echo "Installing ZSH Syntax Higlighting"
-sleep 3
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-
-echo "Installing ZSH Fast Syntax Higlighting"
-sleep 3
-git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting
-
-echo "Installing ZSH FAuto Complete"
-sleep 3
-git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
 
 #-----Packages-----#
 echo "Installing Packges" && sleep 3
@@ -116,9 +91,6 @@ sudo ln -s /home/$USER/mydots/cursors/Future-dark-cursors /usr/share/icons/
 sudo rm -rf /usr/share/icons/default
 sudo ln -s /home/$USER/mydots/cursors/default /usr/share/icons/
 
-
-
-
-
-
-
+#-----Enable Ly-----#
+sudo systemctl enable ly
+sudo systemctl start ly
